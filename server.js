@@ -5,7 +5,7 @@
  var express = require("express");
  var middleware = require("./middleware") //bulunduğum klasörün altında bulunan middleware  isimli dosyayı buraya import et
  var app = express();  //burada fonks olarak kullanmak icin
- var port = 3000;
+ var port = process.env.port || 3000;
 
  //root hali   localhost/3000 
  /*
