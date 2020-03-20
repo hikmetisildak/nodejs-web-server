@@ -3,7 +3,7 @@
  */
 
  var express = require("express");
- var middleware = require("./middleware") //bulunduğum klasörün altında bulunan middleware  isimli dosyayı buraya import et
+ var middleware = require("./middleware"); //bulunduğum klasörün altında bulunan middleware  isimli dosyayı buraya import et
  var app = express();  //burada fonks olarak kullanmak icin
  var port = process.env.port || 3000;
 
@@ -25,7 +25,7 @@ Application seviyesinde tanımlarken rootların en üstünde olmalı tanımlama
 
 app.use(middleware.logger); //app. seviyesinde 
 
-app.get("/hakkimda",middleware.requireAuthentication, function(req, res){  //istek içinde root halinde.
+app.get("/hakkimda", middleware.requireAuthentication, function(req, res){  //istek içinde root halinde.
     res.send("Hakkımda sayfası !!!"); //eğer hakkimda istediği gelirse. tarayıcıda localhost:3000/hakkimda diyerek çalıştırıyoruz
 })
 
